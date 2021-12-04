@@ -1,1 +1,179 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #04B2BF;
+$primary-hover: #1CDBEA;
+
+$secondary-color: #262626;
+
+$danger-color: #E56363;
+$tab-size: 780px;
+
+$btn-radius: 40px;
+
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-color: #0B0B0B;
+}
+
+
+
+
+
+
+
+div, section, header, main, footer, nav, form{
+    box-sizing: border-box;
+}
+
+a, button{
+    cursor: pointer;
+    box-sizing: border-box;
+    &:disabled{
+        cursor: default;
+    }
+    transition: .7s;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #fff; 
+}
+
+button{
+    background: none;
+    border: 1px solid #F5F5F5;
+}
+
+ul, li, p, h1, h2, h3, h4{
+    margin: 0;
+    padding: 0;
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+
+
+router-outlet{
+    position: absolute;
+}
+
+
+
+
+::-webkit-scrollbar{
+    width:8px;
+    height: 8px;
+    @media screen and ( max-width:$tab-size ) {
+        width: 0px;
+        height: 0px;
+    }
+}
+  
+::-webkit-scrollbar-thumb{
+    border: none;
+    background: $primary-color;
+    transition: .3s;
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+    background: $primary-hover;
+}
+  
+::-webkit-scrollbar-track{
+    border-width:0;
+    background: $secondary-color;
+}
+
+*{
+    color: #F5F5F5;
+    font-weight: 500;
+}
+*::selection{
+    background-color: $primary-color;
+}
+
+
+.row{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+
+.btn{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 48px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+
+.bg-response{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.btn-outline{
+    @extend .btn;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+
+    &:hover{
+        background-color: $primary-hover;
+        border-color: $primary-hover;
+        color: #0B0B0B;
+    }
+}
+
+.btn-primary{
+    @extend .btn;
+    color: #0B0B0B;
+    border-color: inherit;
+    background-color: $primary-color;
+    &:hover{
+        background-color: $primary-hover;
+    }
+}
+
+
+
+
+
+.anchor{
+    position: absolute;
+    top: -80px;
+    width: 0px;
+    height: 0px;
+    pointer-events: none;    
+}
+
+
+
+
+
+.section{
+    display: grid;
+    row-gap: 80px;
+    position: relative;
+    &__title{
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 34px;
+    }
+}

@@ -1,0 +1,16 @@
+:host{
+    display: grid;
+}
+
+main{
+    display: grid;
+    padding: 120px 60px;
+    box-sizing: border-box;
+    row-gap: 320px;
+    overflow-x: hidden;
+    >*{
+        max-width: 1240px;
+        width: 100%;
+        justify-self: center;
+    }
+}

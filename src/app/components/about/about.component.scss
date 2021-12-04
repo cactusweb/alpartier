@@ -1,0 +1,52 @@
+
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 60px;
+    position: relative;
+}
+.section{
+    position: relative;
+}
+
+.section__title{
+    position: sticky;
+    top: 20px
+}
+app-planetary-system{
+    position:sticky ;
+    top: 0;
+    padding-top: 20px;
+    height: 540px;
+}
+
+
+app-planetary-system{
+    justify-self: end;
+}
+
+.about-list{
+    display: grid;
+    row-gap: 200px;
+
+
+}
+
+.about-block{
+    display: grid;
+    row-gap: 12px;
+    transition: .3s;
+    &__title{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #04B2BF;
+    }
+
+    &__description{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,177 @@
+:host{
+    display: block;
+}
+
+.system{
+    position: relative;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    height: 540px;
+    width: 540px;
+}
+
+.system__circle{
+    border-radius: 50%;     
+    border-width: 1px;
+    border-color: #999999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &--dashed{
+        border-style: dashed;
+    }
+    &--solid{
+        border-style: solid;
+    }
+
+    
+    &:first-child{
+        width: 540px;
+        height: 540px;
+    }
+    &:nth-child(2){
+        width: 420px;
+        height: 420px;
+    }
+    &:nth-child(3){
+        width: 300px;
+        height: 300px;
+    }
+    &:nth-child(4){
+        width: 180px;
+        height: 180px;
+    }
+    
+
+    div{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: inherit;
+        left: inherit;
+    }
+
+    img{
+        position: absolute;
+        &:first-child{
+            left: 50%;
+            top: 0;
+        }
+        &:last-child{
+            left: 50%;
+            top: 100%;
+        }
+    }
+    // rotateNegative360First
+} 
+
+img{
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// animations
+.system__circle{
+    
+    div{
+        transform-origin: top left;
+        // animation-name: rotate360;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+
+    &:first-child{
+        div{
+            animation-name: rotate360First;
+            animation-duration: 40s;
+        }
+        img{
+            animation-name: rotateNegative360First;
+            animation-duration: 40s;
+        }
+    }
+    &:nth-child(2){
+        div{
+            animation-name: rotate360Second;
+            animation-duration: 50s;
+        }
+        img{
+            animation-name: rotateNegative360Second;
+            animation-duration: 50s;
+        }
+    }
+    &:nth-child(3){
+        div{
+            animation-name: rotate360Third;
+            animation-duration: 65s;
+        }
+        img{
+            animation-name: rotateNegative360Third;
+            animation-duration: 65s;
+        }
+    }
+
+    img{
+        transform-origin: top left;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    // rotateNegative360First
+} 
+
+
+
+@keyframes rotate360First{
+    from{ transform: rotate(0deg) translate(-50%, -50%); }
+    to{ transform: rotate(360deg) translate(-50%, -50%); }
+}
+@keyframes rotate360Second{
+    from{ transform: rotate(50deg) translate(-50%, -50%); }
+    to{ transform: rotate(410deg) translate(-50%, -50%); }
+}
+@keyframes rotate360Third{
+    from{ transform: rotate(80deg) translate(-50%, -50%); }
+    to{ transform: rotate(440deg) translate(-50%, -50%); }
+}
+
+
+
+@keyframes rotateNegative360First{
+    from{ transform: rotate(0deg) translate(-50%, -50%); }
+    to{ transform: rotate(-360deg) translate(-50%, -50%); }
+}
+@keyframes rotateNegative360Second{
+    from{ transform: rotate(-50deg) translate(-50%, -50%); }
+    to{ transform: rotate(-410deg) translate(-50%, -50%); }
+}
+@keyframes rotateNegative360Third{
+    from{ transform: rotate(-80deg) translate(-50%, -50%); }
+    to{ transform: rotate(-440deg) translate(-50%, -50%); }
+}

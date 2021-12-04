@@ -1,0 +1,89 @@
+
+header{
+    display: grid;
+    background-image: url('/assets/bg-header.png');
+    min-height: 100vh;
+    padding: 32px 60px;
+    grid-template-rows: auto 1fr;   
+    
+    >*{
+        max-width: 1240px;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+p{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+
+.btn-primary{
+    width: 132px;
+    margin-top: 16px;
+}
+
+
+.main{
+    display: grid;
+    row-gap: 24px;
+    position: relative;
+    top: -20px;
+    align-self: center;
+
+    &__title{
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 71px;
+        text-transform: uppercase;
+    }
+
+    &__description{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 40px;
+
+        >:last-child{
+            justify-self: end;
+            text-align: end;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

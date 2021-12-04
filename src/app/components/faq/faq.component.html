@@ -1,0 +1,19 @@
+<section class="section">
+    <div class="acnhor" id="faq"></div>
+    <h2 class="section__title">FAQ</h2>
+
+    <div class="content">
+        <div class="questions">
+            <h3 class="questions__item" (mouseenter)="activeQuestion = 1" [class.active]="activeQuestion == 1">Сколько стоит подписка в месяц?</h3>
+            <h3 class="questions__item" (mouseenter)="activeQuestion = 2" [class.active]="activeQuestion == 2">Можно ли перепродавать лицензии?</h3>
+            <h3 class="questions__item" (mouseenter)="activeQuestion = 3" [class.active]="activeQuestion == 3">Как к вам попасть?</h3>
+            <h3 class="questions__item" (mouseenter)="activeQuestion = 4" [class.active]="activeQuestion == 4">Представляете ли вы возврат стоимости?</h3>
+        </div>
+        <div class="answere">
+            <p [class.active]="activeQuestion == 1">Некоторая информация</p>
+            <p [class.active]="activeQuestion == 2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae consequatur numquam tenetur provident porro magnam asperiores natus neque deserunt.</p>
+            <p [class.active]="activeQuestion == 3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, placeat.</p>
+            <p [class.active]="activeQuestion == 4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus corporis ipsum aut dignissimos nihil blanditiis molestias quam numquam.</p>
+        </div>
+    </div>
+</section>

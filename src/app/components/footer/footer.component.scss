@@ -1,0 +1,42 @@
+footer{
+    grid-template-columns: auto 1fr auto;
+    column-gap: 80px;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+    column-gap: 64px;
+    justify-content: start;
+    li a{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        transition: .3s;
+        &:hover{
+            color: #04B2BF;
+        }
+    }
+}
+    
+
+
+#to-main{
+    column-gap: 16px;
+    .btn-outline{
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        svg path{
+            transition: .3s;
+        }
+    }
+    
+    &:hover .btn-outline{
+        background-color: #04B2BF;
+        border-color: inherit !important;
+        svg path{
+            stroke: #0B0B0B;
+        }
+    }
+}

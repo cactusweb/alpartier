@@ -1,0 +1,22 @@
+
+nav{
+    column-gap: 30px;
+    grid-template-columns: auto 1fr auto;
+}
+
+ul{
+    list-style: none;
+    justify-self: center;
+    column-gap: 32px;
+    a{
+        transition: .3s;
+        &:hover{
+            color: #04B2BF;
+        }
+    }
+}
+
+.btn-outline{
+    width: 154px;
+    height: 48px;
+}

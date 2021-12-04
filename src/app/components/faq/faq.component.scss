@@ -1,0 +1,48 @@
+.content{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 80px;
+}
+
+.questions{
+    display: grid;
+    row-gap: 24px;
+    &__item{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        cursor: default ;
+        transition: .3s;
+        &.active{
+            color: #04B2BF;
+        }
+    }
+}
+
+.answere{
+    display: grid;
+    row-gap: 16px;
+    position: relative;
+    &::before{
+        display: grid;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #04B2BF;
+    }
+
+    p{
+        transition: .3s;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        transition: .3s;
+        opacity: 0;
+        position: absolute;
+        top: 17px;
+        left: 0px;
+        &.active{
+            opacity: 1;
+        }
+    }
+}
