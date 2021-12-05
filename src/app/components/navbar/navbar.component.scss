@@ -1,13 +1,29 @@
+$tab-size: 780px;
 
 nav{
     column-gap: 30px;
     grid-template-columns: auto 1fr auto;
+    @media screen and ( max-width: $tab-size ) {
+        grid-template-columns: 1fr auto;
+    }
+}
+
+img{
+    @media screen and ( max-width: $tab-size ) {
+        height: 56px;
+    }
 }
 
 ul{
     list-style: none;
     justify-self: center;
     column-gap: 32px;
+
+    @media screen and ( max-width: $tab-size ) {
+        display: none;
+    }
+
+
     a{
         transition: .3s;
         &:hover{

@@ -1,3 +1,5 @@
+$tab-size: 780px;
+
 :host{
     display: grid;
 }
@@ -7,10 +9,31 @@ main{
     padding: 120px 60px;
     box-sizing: border-box;
     row-gap: 320px;
-    overflow-x: hidden;
+    @media screen and ( max-width: 900px) {
+        padding: 60px;
+        row-gap: 180px;   
+    }
+    @media screen and ( max-width: $tab-size ) {
+        padding: 40px 16px 58px;
+    }
+
     >*{
         max-width: 1240px;
         width: 100%;
         justify-self: center;
+    }
+}
+
+
+app-faq-tablet{
+    display: none;
+    @media screen and ( max-width: 900px ) {
+        display: grid;
+    }
+}
+
+app-faq{
+    @media screen and ( max-width: 900px ) {
+        display: none;
     }
 }

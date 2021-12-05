@@ -1,35 +1,45 @@
-
+$tab-size: 780px;
 
 .content{
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 60px;
     position: relative;
+    @media screen and ( max-width: 900px ) {
+        grid-template-columns: auto;
+        row-gap: 75px;
+    }
 }
+
 .section{
     position: relative;
+    row-gap: 46px;
 }
-
-.section__title{
-    position: sticky;
-    top: 20px
-}
-app-planetary-system{
-    position:sticky ;
-    top: 0;
-    padding-top: 20px;
-    height: 540px;
-}
-
 
 app-planetary-system{
+    align-self: start;
+    transition: 0s;
     justify-self: end;
+    @media screen and ( max-width: 900px ) {
+        grid-row: 1/2;
+        justify-self: center;
+    }
 }
 
 .about-list{
     display: grid;
-    row-gap: 200px;
+    row-gap: 150px;
 
+    @media screen and ( max-width: 1200px ) {
+        row-gap: 100px;
+    }
+    @media screen and ( max-width: 900px ) {
+        row-gap: 40px;
+    }
+
+    @media screen and ( max-width: $tab-size ) {
+        row-gap: 60px;
+    }
 
 }
 

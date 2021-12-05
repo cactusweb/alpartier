@@ -1,3 +1,7 @@
+$laptop-size: 1400px;
+$tab-size: 950px;
+$small-phone: 375px;
+
 :host{
     display: block;
 }
@@ -9,6 +13,26 @@
     place-content: center;
     height: 540px;
     width: 540px;
+    @media screen and ( max-width: $laptop-size ) {
+        height: 420px;
+        width: 420px;
+    }
+
+    @media screen and ( max-width: $tab-size ) {
+        height: 340px;
+        width: 340px;
+    }
+
+    @media screen and ( max-width: $small-phone ) {
+        height: 290px;
+        width: 290px;
+    }
+    
+    @media screen and ( max-width: $tab-size ) {
+        > img{
+            height: 44px;
+        }
+    }
 }
 
 .system__circle{
@@ -30,18 +54,66 @@
     &:first-child{
         width: 540px;
         height: 540px;
+        @media screen and ( max-width: $laptop-size ) {
+            height: 420px;
+            width: 420px;
+        }
+        @media screen and ( max-width: $tab-size ) {
+            height: 340px;
+            width: 340px;
+        }
+        @media screen and ( max-width: $small-phone ) {
+            height: 290px;
+            width: 290px;
+        }
     }
     &:nth-child(2){
         width: 420px;
         height: 420px;
+        @media screen and ( max-width: $laptop-size ) {
+            height: 320px;
+            width: 320px;
+        }
+        @media screen and ( max-width: $tab-size ) {
+            height: 265px;
+            width: 265px;
+        }
+        @media screen and ( max-width: $small-phone ) {
+            height: 215px;
+            width: 215px;
+        }
     }
     &:nth-child(3){
         width: 300px;
         height: 300px;
+        @media screen and ( max-width: $laptop-size ) {
+            height: 220px;
+            width: 220px;
+        }
+        @media screen and ( max-width: $tab-size ) {
+            height: 190px;
+            width: 190px;
+        }
+        @media screen and ( max-width: $small-phone ) {
+            height: 140px;
+            width: 140px;
+        }
     }
     &:nth-child(4){
         width: 180px;
         height: 180px;
+        @media screen and ( max-width: $laptop-size ) {
+            height: 120px;
+            width: 120px;
+        }
+        @media screen and ( max-width: $tab-size ) {
+            height: 115px;
+            width: 115px;
+        }
+        @media screen and ( max-width: $small-phone ) {
+            height: 65px;
+            width: 65px;
+        }
     }
     
 
@@ -55,6 +127,17 @@
 
     img{
         position: absolute;
+        height: 64px;
+        width: 64px;
+        
+        @media screen and ( max-width: $laptop-size ) {
+            height: 50px;
+            width: 50px;
+        }
+        @media screen and ( max-width: $tab-size ) {
+            height: 40px;
+            width: 40px;
+        }
         &:first-child{
             left: 50%;
             top: 0;

@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { TextAnimationComponent } from './components/text-animation/text-animation.component';
 import { PlanetarySystemComponent } from './components/planetary-system/planetary-system.component';
+import { FaqTabletComponent } from './components/faq-tablet/faq-tablet.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PlanetarySystemComponent } from './components/planetary-system/planetar
     FooterComponent,
     FaqComponent,
     TextAnimationComponent,
-    PlanetarySystemComponent
+    PlanetarySystemComponent,
+    FaqTabletComponent
   ],
   imports: [
     BrowserModule,

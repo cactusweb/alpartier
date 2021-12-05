@@ -1,3 +1,4 @@
+$tab-size: 780px;
 
 header{
     display: grid;
@@ -5,6 +6,10 @@ header{
     min-height: 100vh;
     padding: 32px 60px;
     grid-template-rows: auto 1fr;   
+
+    @media screen and ( max-width: $tab-size ) {
+        padding: 16px 16px;
+    }
     
     >*{
         max-width: 1240px;
@@ -17,12 +22,19 @@ p{
     font-weight: 500;
     font-size: 22px;
     line-height: 27px;
+    @media screen and ( max-width: $tab-size ) {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 
 .btn-primary{
     width: 132px;
     margin-top: 16px;
+    @media screen and ( max-width: $tab-size ) {
+        margin-top: 0px;
+    }
 }
 
 
@@ -32,22 +44,39 @@ p{
     position: relative;
     top: -20px;
     align-self: center;
+    @media screen and ( max-width: 900px ) {
+        row-gap: 40px;
+        top: 0px;
+    }
 
     &__title{
         font-weight: bold;
         font-size: 100px;
         line-height: 71px;
         text-transform: uppercase;
+        word-wrap: break-word;
+        max-width: calc(100vw - 32px);
+        @media screen and ( max-width: $tab-size ) {
+            font-size: 54px;
+            line-height: 66px;
+        }
     }
 
     &__description{
         display: grid;
         grid-template-columns: 1fr auto;
-        column-gap: 40px;
+        column-gap: 35px;
+        row-gap: 16px;
+        @media screen and ( max-width: 900px ) {
+            grid-template-columns: auto;
+        }
+
 
         >:last-child{
             justify-self: end;
-            text-align: end;
+            @media screen and ( max-width: 900px ) {
+                justify-self: start;
+            }
         }
     }
 }
