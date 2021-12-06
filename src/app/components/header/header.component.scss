@@ -32,6 +32,7 @@ p{
 .btn-primary{
     width: 132px;
     margin-top: 16px;
+    border: none;
     @media screen and ( max-width: $tab-size ) {
         margin-top: 0px;
     }
